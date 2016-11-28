@@ -1,0 +1,320 @@
+@charset "UTF-8";
+.timer-container {
+  margin: 0 auto;
+  width: 76px;
+  height: 76px;
+  background: url('../images/timer-bg.png?1480331531') no-repeat top center;
+  background-size: cover;
+  padding-top: 14px;
+  color: #d7b66c;
+}
+.timer-container span {
+  display: block;
+  text-align: center;
+  line-height: 1;
+}
+.timer-container span.serial, .timer-container span.day {
+  font-size: 12px;
+}
+.timer-container span.countdown {
+  font-size: 1.75em;
+  font-family: Impact, Charcoal, sans-serif;
+  text-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
+}
+
+.nav-tabs {
+  border: 0;
+  margin-top: -60px;
+}
+.nav-tabs > li {
+  width: 42%;
+  text-align: center;
+}
+.nav-tabs > li > a {
+  font-family: 'Sarpanch', sans-serif;
+  font-weight: 700;
+  font-size: 1.125em;
+  color: #d8d8d8;
+  line-height: 1;
+  text-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: transparent;
+  position: relative;
+}
+.nav-tabs > li > a:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #d8d8d8;
+  display: block;
+  position: absolute;
+  left: 48%;
+  top: 32px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+  background-color: transparent;
+  color: #d7b66c;
+  border: 0;
+  border-bottom: 1px solid #d7b66c;
+}
+.nav-tabs > li:nth-of-type(1) {
+  float: left;
+}
+.nav-tabs > li:nth-of-type(2) {
+  float: right;
+}
+@media only screen and (max-width: 320px) {
+  .nav-tabs > li {
+    width: 40%;
+  }
+}
+.nav-tabs > li.active > a {
+  color: #d7b66c;
+  border: 0;
+  border-bottom: 1px solid #d7b66c;
+  background-color: transparent;
+}
+.nav-tabs > li.active > a:after {
+  background: #d7b66c;
+}
+.nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  color: #d7b66c;
+  border: 0;
+  border-bottom: 1px solid #d7b66c;
+}
+
+.tab-content {
+  padding: 22px 6px;
+}
+.tab-content .btn {
+  margin-bottom: 10px;
+}
+.tab-content #comment-group {
+  *zoom: 1;
+  clear: both;
+}
+.tab-content #comment-group:after, .tab-content #comment-group:before {
+  content: "";
+  display: table;
+}
+.tab-content #comment-group:after {
+  clear: both;
+}
+.tab-content .comment, .tab-content .feed {
+  margin-bottom: 16px;
+  padding: 8px;
+  color: #d8d8d8;
+  font-size: 1em;
+  line-height: 1.25em;
+  position: relative;
+  background: rgba(96, 69, 9, 0.8);
+  border-radius: 2px;
+  text-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
+  box-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6), 0 10px 30px rgba(0, 1, 2, 0.6);
+}
+.tab-content .comment:after, .tab-content .feed:after {
+  top: 100%;
+  right: 4px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: rgba(96, 69, 9, 0.8);
+  border-width: 6px;
+}
+.tab-content .feed {
+  margin-bottom: 10px;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 13px;
+  line-height: 1.5em;
+  word-spacing: .2em;
+  letter-spacing: .04em;
+  padding: 6px 8px;
+  width: 94%;
+}
+.tab-content .feed .trader-info {
+  margin-right: 4px;
+  width: 40px;
+  display: inline-block;
+}
+.tab-content .feed .trader-info > span {
+  display: block;
+}
+.tab-content .feed .trader-info > span.photo {
+  margin: 0 auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
+}
+.tab-content .feed .trader-info > span.photo img {
+  width: 100%;
+}
+.tab-content .feed .trader-info > span.states {
+  text-align: center;
+  font-family: 'Sarpanch', "source-han-sans-traditional", sans-serif, 'arial', "微軟正黑體", "Microsoft JhengHei";
+  line-height: 1.125em;
+  font-size: 12px;
+}
+.tab-content .feed .feed-content {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.tab-content .feed .feed-content .time {
+  color: #999;
+  font-size: 11px;
+}
+.tab-content .feed.left:after {
+  right: auto;
+  left: 4px;
+}
+.tab-content .feed.right {
+  float: right;
+}
+.tab-content .feed.news {
+  width: 100%;
+  margin: 0 auto 10px;
+  float: none;
+  background: rgba(9, 51, 78, 0.7);
+}
+.tab-content .feed.news p {
+  margin-bottom: 0;
+}
+.tab-content .feed.news p > span {
+  display: inline;
+}
+.tab-content .feed.news:after {
+  display: none;
+  border: 0;
+}
+
+.info-container {
+  width: 100%;
+  position: fixed;
+  bottom: 55px;
+  left: 0px;
+  height: auto;
+  font-weight: 400;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  background: url('../images/info_bg.png?1480327117') center -20px no-repeat;
+}
+
+.toggle {
+  width: 182px;
+  height: 34px;
+  margin: 15px auto 0;
+  text-align: center;
+  position: relative;
+  top: 0;
+  z-index: 2;
+  background: url('../images/toggle.png?1480336249') center top no-repeat;
+}
+
+#arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 182px;
+  height: 34px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+#arrow:checked + label[for="arrow"]:before {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#arrow:checked + label[for="arrow"]:after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+label[for="arrow"] {
+  width: 100px;
+  height: 0;
+  background: #d9bd69;
+  transition: .75s;
+  -webkit-transition: 1s;
+  cursor: pointer;
+}
+label[for="arrow"]:before, label[for="arrow"]:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: 10px;
+  box-shadow: 0 0 4px #000102;
+  background: inherit;
+  transition: inherit;
+  -webkit-transition: inherit;
+}
+label[for="arrow"]:before {
+  left: 83px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+label[for="arrow"]:after {
+  left: 89px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+label[for="arrow"] span {
+  color: #d9bd69;
+  width: 100px;
+  margin: 0 auto;
+  font-size: 12px;
+  display: block;
+  padding-top: 12px;
+  text-shadow: 0 0 6px #000102;
+}
+
+.game-info-top {
+  height: 156px;
+  color: #fff;
+}
+
+.game-info-bottom {
+  height: 300px;
+  padding: 6px;
+}
+.game-info-bottom .col-xs-3, .game-info-bottom .col-xs-6 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.game-info-bottom .game-info {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
+}
+.game-info-bottom .game-info span {
+  display: block;
+}
+.game-info-bottom .trading-curve {
+  width: 90%;
+  padding: 10px;
+  min-height: 200px;
+  margin: 10px auto;
+  border: 1px solid #999;
+}

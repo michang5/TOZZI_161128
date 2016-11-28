@@ -1,0 +1,304 @@
+@import 'compass';
+//@import 'screen';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+//@import 'base/css3-mixins';
+
+.timer-container {
+	margin: 0 auto;
+	width: 76px;
+	height: 76px;
+	background: image-url('timer-bg.png') no-repeat top center;
+	background-size: cover;
+	padding-top: 14px;
+	color: $gold;
+	span {
+		display: block;
+		text-align: center;
+		line-height: 1;
+		&.serial, &.day {
+			font-size: 12px;
+		}
+		&.countdown {
+			font-size: $xxxl-font;
+			font-family: Impact, Charcoal, sans-serif;
+			@include text-dark-shadow;
+		}
+	}
+}
+.nav-tabs {
+	border: 0;
+	margin-top: -60px;
+	> li {
+		width: 42%;
+		text-align: center;
+		> a {
+			font-family: 'Sarpanch', sans-serif;
+			font-weight: 700;
+			font-size: $l-font;
+			color: $light-gray;
+			line-height: 1;
+			@include text-dark-shadow;
+			border: 0;
+			border-bottom: 1px solid $light-gray;
+			background-color: transparent;
+			position: relative;
+			&:after {
+				content: ('');
+				width: 8px;
+				height: 8px;
+				background: $light-gray;
+				display: block;
+				position: absolute;
+				left: 48%;
+				top: 32px;
+				@include transform(rotate(45deg));
+			}
+			&:hover, &:focus {
+				background-color: transparent;
+				color: $gold;
+				border: 0;
+				border-bottom: 1px solid $gold;
+			}
+		}
+		&:nth-of-type(1) {
+			float: left;
+		}
+		&:nth-of-type(2) {
+			float: right;
+		}
+		@include respond-to (xxs-mobile){
+			width: 40%;
+		}
+	}
+	> li.active {
+		> a {
+			color: $gold;
+			border: 0;
+			border-bottom: 1px solid $gold;
+			background-color: transparent;
+			&:after {
+				background: $gold;
+			}
+			&:hover, &:focus {
+				background-color: transparent;
+				color: $gold;
+				border: 0;
+				border-bottom: 1px solid $gold;
+			}
+		}
+	}
+}
+
+.tab-content {
+	padding: 22px 6px;
+	.btn {
+//		float: right;
+		margin-bottom: 10px;
+	}
+	#comment-group {
+		@include clearfix;
+		clear: both;
+	}
+	.comment, .feed {
+		margin-bottom: 16px;
+		padding: 8px;
+		color: $light-gray;
+		font-size: $m-font;
+		line-height: $xl-font;
+		position: relative;
+		background: rgba($dark-gold,.8);
+		border-radius: 2px;
+		@include text-dark-shadow;
+		@include box-dark-shadow-spread;
+		&:after {
+			top: 100%;
+			right: 4px;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: transparent;
+			border-top-color: rgba($dark-gold,.8);
+			border-width: 6px;
+		}
+	}
+	.feed {
+		margin-bottom: 10px;
+		display: -webkit-flex;
+		display: flex;
+		font-size: 13px;
+		line-height: $xxl-font;
+		word-spacing: .2em;
+		letter-spacing: .04em;
+		padding: 6px 8px;
+		width: 94%;
+		.trader-info {
+			margin-right: 4px;
+			width: 40px;
+			display: inline-block;
+			> span {
+				display: block;
+				&.photo {
+					margin: 0 auto;
+					width: 32px;
+					height: 32px;
+					border-radius: 100%;
+					overflow: hidden;
+					@include box-dark-shadow;
+					img {
+						width: 100%;
+					}
+				}
+				&.states {
+					text-align: center;
+					font-family: 'Sarpanch', "source-han-sans-traditional", sans-serif, 'arial', "微軟正黑體", "Microsoft JhengHei";
+					line-height: $l-font;
+					font-size: 12px;
+				}
+			}
+			
+		}
+		.feed-content {
+			-webkit-flex: 1;
+			flex: 1;
+			.time {
+				color: $gray;
+				font-size: 11px;
+			}
+		}
+		&.left {
+			&:after {
+				right: auto;
+				left: 4px;
+			}
+		}
+		&.right {
+			float: right;
+		}
+		&.news {
+			p {
+				margin-bottom: 0;
+				> span {
+					display: inline;
+				} 
+			} 
+			width: 100%;
+			margin: 0 auto 10px;
+			float: none;
+			background: rgba($blue,.7);
+			&:after {
+				display: none;
+				border: 0;
+			}
+		}
+	}
+}
+
+.info-container {
+    width: 100%;
+    position: fixed;
+    bottom: 55px;
+    left: 0px;
+//    max-height: 90%;
+    height: auto;
+    font-weight: 400;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+	background: image-url('info_bg.png') center -20px no-repeat;
+}
+.toggle {
+	width: 182px;
+	height: 34px;
+	margin: 15px auto 0;
+	text-align: center;
+	position: relative;
+	top: 0;
+	z-index: 2;
+	background: image-url('toggle.png') center top no-repeat;
+}
+#arrow {
+	position: absolute;
+	left:0;
+	top:0;
+	width: 182px;
+	height: 34px;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 1;
+	&:checked + label[for="arrow"]:before{
+		@include transform(rotate(45deg));
+	}
+	&:checked + label[for="arrow"]:after {
+		@include transform(rotate(-45deg));
+	}
+}
+label[for="arrow"] {
+	width: 100px;
+	height: 0;
+	background: $light-gold;
+	transition: .75s;    
+	-webkit-transition: 1s; 
+	cursor: pointer;
+	&:before, &:after {
+		content:'';
+		position:absolute;
+		width: 10px;
+		height: 2px;
+		top: 10px;
+		box-shadow: 0 0 4px $dark;
+		background: inherit;
+		transition: inherit;
+		-webkit-transition: inherit;
+	}
+	&:before {
+		left: 83px;
+		@include transform(rotate(-45deg));
+	}
+	&:after {
+		left: 89px;
+		@include transform(rotate(45deg));
+	}
+	span {
+		color: $light-gold;
+		width: 100px;
+		margin: 0 auto;
+		font-size: 12px;
+		display: block;
+		padding-top: 12px;
+		text-shadow: 0 0 6px $dark;
+	}
+}
+
+.game-info-top {
+	height: 156px;
+	color: $white;
+}
+.game-info-bottom {
+	height: 300px;
+	padding: 6px;
+	.col-xs-3, .col-xs-6 {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	.game-info {
+		background: rgba($white,.1);
+		font-size: 12px;
+		text-align: center;
+		color: $white;
+		@include box-dark-shadow;
+		span {
+			display: block;
+		}
+	}
+	.trading-curve {
+		width: 90%;
+		padding: 10px;
+		min-height: 200px;
+		margin: 10px auto;
+		border: 1px solid $gray;
+	}
+}

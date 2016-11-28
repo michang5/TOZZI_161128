@@ -1,0 +1,255 @@
+@import 'compass';
+//@import 'screen';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+//@import 'base/css3-mixins';
+
+/* ------------ base ------------ */
+body, html {
+	min-height: 100%!important;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Roboto', "source-han-sans-traditional", sans-serif, 'arial', "微軟正黑體", "Microsoft JhengHei";
+	word-wrap: break-word;
+	word-break: normal;
+	line-height: 1.85;
+	background: image-url('bg.jpg') top center no-repeat;
+	background-size: cover;
+//	color: $dark-gray;
+}
+
+//basic style
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 0;
+	line-height: 1.8;
+}
+*:hover {
+	@include transition(color, .5s, ease-in);
+}
+h1 {}
+h2 {
+}
+p {
+	font-size: $m-font;
+	font-weight: 200;
+	font-family: "source-han-sans-traditional", sans-serif;
+}
+p, h2, h3, h4 {
+}
+a {
+	color: $light-gray;
+	@include transition(color, .5s, ease-in);
+	&:hover, &:focus { 
+		text-decoration: none;
+		color: $dark-gold;
+	}
+}
+hr {
+}
+.clearfix {
+	@include clearfix;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	-webkit-padding-start: 0;
+	list-style: none;
+}
+
+//btn style
+.btn {
+	margin: 2px auto;
+}
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none;
+}
+.btn-primary {
+	background: $red;
+	border: 1px solid $red;
+	&:hover, &:active , &:focus {
+		background: $red;
+		border: 1px solid $red;
+	}
+	&:active {
+		&:hover, &:focus  {
+			background: $gold;
+			border: 1px solid $gold;
+		}
+	}
+	&.disabled {
+		color: beige;
+		background: $light-gold;
+		border: 1px solid $light-gold;
+		&:hover, &:focus, &.focus, &:active, &.active, &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled].focus, &[disabled]:active, &[disabled].active {
+			background: $light-gold;
+			border: 1px solid $light-gold;	
+		}
+	}
+}
+.btn-lg, .btn-group-lg > .btn {
+	border-radius: 2px;
+	padding: 12px 36px;
+	letter-spacing: .1em;
+	font-size: 22px;
+	box-shadow: 0 10px 40px rgba($gray, .9)!important; 
+	i {
+		margin-left: 10px;
+	}
+	@include respond-to (only-device){
+		letter-spacing: 0;
+		font-size: 20px;
+	}
+}
+.btn-info {
+	@include transparent ($white, .7);
+	border: 1px solid $gold;
+	color: $gold;
+	&:hover, &:active , &:focus {
+		@include transparent ($white, .96);
+		border: 1px solid $gold;
+		color: $gold;
+	}
+	&:active {
+		&:hover, &:focus  {
+			@include transparent ($white, .96);
+			border: 1px solid $gold;
+		}
+	}
+}
+.btn-md {
+	border-radius: 0;
+	padding: 12px 25px;
+	font-size: 18px;
+	margin: 0 5px;
+}
+.btn-sm {
+	border-radius: 4px;
+	padding: 8px 16px;
+	font-size: 16px;
+	margin: 0 5px;
+	@include respond-to (normal-mobile){
+		font-size: 14px;
+		padding: 4px 8px;
+	}
+}
+//input
+header {
+	text-align: center;
+	h2.logo {
+		font-family: 'Sarpanch', sans-serif;
+		font-weight: 900;
+		color: $light-gray;
+		text-align: center;
+		display: inline-block;
+		margin: 10px auto;
+		line-height: 1;
+		text-shadow: 0 0 6px #000, 0 0 0 #000, 1px 4px 6px #000;
+	}
+}
+nav.icon-group {
+	position: absolute;
+	top: 10px;
+	right: 6px;
+	ul {
+		li {
+			margin: 0 1px;
+			@include inline-block;
+			&:nth-child(1) {
+				background: image-url('icon-messege.png');
+			}
+			&:nth-child(2) {
+				background: image-url('icon-member.png');
+			}
+			&:nth-child(3) {
+				background: image-url('icon-notification.png');
+			}
+			a {
+				display: block;
+				height: 26px;
+				width: 26px;
+			}
+		}
+	}
+}
+//element
+nav.main {
+	@include background-image(radial-gradient(50% -50%, circle, #004166, $dark 80%));
+	border-top: 1px solid #09334E;
+	font-family: 'Sarpanch', sans-serif;
+	font-size: .9em;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 56px;
+	z-index: 9999;
+	ul {
+		text-align: center;
+		li {
+			@include inline-block;
+			width: 19%;
+			height: 56px;
+			a {
+				display: block;
+				line-height: 1;
+				text-shadow: 0 0 3px $dark, 0 0 6px $dark;
+				&:before {
+					content: ('');
+					display: block;
+					margin: 0 auto;
+					width: 44px;
+					height: 35px;
+					margin-top: 2px;
+				}
+			}
+			&:nth-child(1) {
+				a {
+					&:before {
+						background: image-url('nav-home.png');
+					}
+				}
+			}
+			&:nth-child(2) {
+				a {
+					&:before {
+						background: image-url('nav-match.png');
+					}
+				}
+			}
+			&:nth-child(3) {
+				a {
+					&:before {
+						background: image-url('nav-trader.png');
+					}
+				}
+			}
+			&:nth-child(4) {
+				a {
+					&:before {
+						background: image-url('nav-portfolio.png');
+					}
+				}
+			}
+			&:nth-child(5) {
+				a {
+					&:before {
+						background: image-url('nav-home.png');
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+.wrapper {
+	padding: 0 10px;
+	min-height: 100%;
+	overflow: hidden;
+}
+

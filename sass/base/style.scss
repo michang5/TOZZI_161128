@@ -1,0 +1,77 @@
+//color
+$primary-color: #e7ce81;
+
+$yellow: #e7ce81;
+$light-gold: #d9bd69;
+$gold: #d7b66c;
+$dark-gold: #604509;
+
+$more-dark-gray: #2b343c;
+$dark-gray: #4f5d69;
+$light-gray: #d8d8d8;
+$gray: #999;
+
+$dark: #000102;
+$white: #fff;
+$blue: #09334E;
+
+$red: #880000;
+
+//font style
+$xxs-font: .75em;
+$xs-font: .8em;
+$s-font: .9em;
+$m-font: 1em;
+$l-font: 1.125em;
+$xl-font: 1.25em;
+$xxl-font: 1.5em;
+$xxxl-font: 1.75em;
+$xxxxl-font: 2em;
+$xxxxxl-font: 2.5em;
+
+@mixin full-screen {
+//	height: 100%;
+	min-height: 100%;
+	width: 100%;
+}
+@mixin clearfix {
+	&:after, &:before {
+		content: "";
+		display: table;
+	}
+	&:after{
+		clear:both;
+	}
+	*zoom:1;
+}
+@mixin selection {
+    ::-moz-selection { @content; }
+    ::selection { @content; }
+}
+@mixin transparent($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	background-color: transparent;
+	background-color: $rgba;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+	zoom: 1;
+}
+@mixin info-font {
+	font-size: $s-font;
+	line-height: $l-font;
+}
+@mixin inline-block {
+	display: -moz-inline-stack;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+@mixin text-dark-shadow {
+	text-shadow: 0 0 4px rgba($dark,.6), 0 0 10px rgba($dark,.6);
+}
+@mixin box-dark-shadow {
+	box-shadow: 0 0 4px rgba($dark,.6), 0 0 10px rgba($dark,.6);
+}
+@mixin box-dark-shadow-spread {
+	box-shadow: 0 0 4px rgba($dark,.6), 0 0 10px rgba($dark,.6), 0 10px 30px rgba($dark,.6);
+}
