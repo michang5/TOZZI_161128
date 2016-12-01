@@ -235,21 +235,29 @@ nav.main ul li a:before {
   width: 44px;
   height: 35px;
   margin-top: 2px;
+  background: url('../images/nav-sprite.png?1480560986') no-repeat;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  nav.main ul li a:before {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url('../images/nav-spritex2.png?1480560742');
+    background-size: 44px 175px;
+  }
 }
 nav.main ul li:nth-child(1) a:before {
-  background: url('../images/nav-home.png?1480319934');
+  background-position: top;
 }
 nav.main ul li:nth-child(2) a:before {
-  background: url('../images/nav-match.png?1480319934');
+  background-position: 0 -35px;
 }
 nav.main ul li:nth-child(3) a:before {
-  background: url('../images/nav-trader.png?1480319934');
+  background-position: 0 -70px;
 }
 nav.main ul li:nth-child(4) a:before {
-  background: url('../images/nav-portfolio.png?1480319935');
+  background-position: 0 -105px;
 }
 nav.main ul li:nth-child(5) a:before {
-  background: url('../images/nav-home.png?1480319934');
+  background-position: 0 -140px;
 }
 
 .wrapper {
