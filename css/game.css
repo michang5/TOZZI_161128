@@ -248,7 +248,7 @@
 label[for="arrow"] {
   width: 100px;
   height: 0;
-  background: #d9bd69;
+  background: #FFF0CC;
   transition: .75s;
   -webkit-transition: 1s;
   cursor: pointer;
@@ -279,7 +279,7 @@ label[for="arrow"]:after {
   transform: rotate(45deg);
 }
 label[for="arrow"] span {
-  color: #d9bd69;
+  color: #FFF0CC;
   width: 100px;
   margin: 0 auto;
   font-size: 12px;
@@ -288,18 +288,116 @@ label[for="arrow"] span {
   text-shadow: 0 0 6px #000102;
 }
 
+.info-container.container {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.info-container.container .row {
+  margin: 0;
+  margin-top: -8px;
+  display: -webkit-flex;
+  display: flex;
+}
+.info-container.container .col-center, .info-container.container .col-side {
+  float: left;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.info-container.container .col-side {
+  width: 108px;
+}
+.info-container.container .col-center {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.info-container.container .col-center + div {
+  float: right;
+}
+.info-container.container .center-info {
+  text-align: center;
+  margin-top: 20px;
+}
+.info-container.container .center-info > span {
+  display: block;
+}
+
 .game-info-top {
   height: 156px;
   color: #fff;
 }
+.game-info-top .col-side .ROI {
+  position: relative;
+  font-size: 1.25em;
+  letter-spacing: -.01em;
+  line-height: 1;
+}
+.game-info-top .col-side .ROI > span {
+  position: absolute;
+  top: 0;
+  font-size: 10px;
+}
+.game-info-top .subscribe {
+  font-size: 15px;
+  padding: 5px;
+  margin: 7px;
+}
+.game-info-top .pro-pic {
+  width: 82px;
+  position: relative;
+}
+.game-info-top .pro-pic img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+}
+.game-info-top .pro-pic .level {
+  font-size: 10px;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  background: #986F11;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  top: 38px;
+}
+.game-info-top .pro-pic.right .level {
+  right: 0;
+}
+.game-info-top .pro-pic.right {
+  float: right;
+}
+@media only screen and (max-width: 320px) {
+  .game-info-top .subscribe {
+    font-size: 12px;
+    padding: 5px 3px;
+    margin: 7px;
+  }
+  .game-info-top .col-side .ROI {
+    font-size: 1.125em;
+  }
+}
 
 .game-info-bottom {
-  height: 300px;
-  padding: 6px;
+  height: 350px;
+  margin-top: 10px;
 }
-.game-info-bottom .col-xs-3, .game-info-bottom .col-xs-6 {
-  padding-left: 8px;
-  padding-right: 8px;
+.game-info-bottom .col-side {
+  font-size: 10px;
+  width: 118px !important;
+  color: #d8d8d8;
+}
+.game-info-bottom .tag-group .tag {
+  color: #999;
+  border-radius: 2px;
+  background: rgba(216, 216, 216, 0.16);
+  padding: 1px 2px;
+  border: 1px solid #999;
+}
+.game-info-bottom .other-info span {
+  display: block;
 }
 .game-info-bottom .game-info {
   background: rgba(255, 255, 255, 0.1);

@@ -13,7 +13,8 @@ body, html {
 	margin: 0;
 }
 body {
-	font-family: 'Roboto', "source-han-sans-traditional", sans-serif, 'arial', "微軟正黑體", "Microsoft JhengHei";
+	
+	font-family: 'Roboto Slab', "source-han-sans-traditional", serif, 'arial', "微軟正黑體", "Microsoft JhengHei";
 	word-wrap: break-word;
 	word-break: normal;
 	line-height: 1.85;
@@ -62,78 +63,100 @@ ul, li {
 
 //btn style
 .btn {
-	margin: 2px auto;
+	span {
+		padding: 0 5px;
+	}
+}
+.btn-xs, .btn-group-xs > .btn {
+	padding: 3px 6px;
+	@include respond-to (xxs-mobile){
+		padding: 1px 3px;
+	}
+}
+.btn-group .btn + .btn, 
+.btn-group .btn + .btn-group, 
+.btn-group .btn-group + .btn, 
+.btn-group .btn-group + .btn-group {
+	margin-left: 1px;
 }
 .btn:focus,.btn:active:focus,.btn.active:focus,
 .btn.focus,.btn:active.focus,.btn.active.focus {
     outline: none;
 }
 .btn-primary {
-	background: $red;
-	border: 1px solid $red;
+	@include background-image(linear-gradient(to bottom,$red,$dark-red));
+	border: 0;
+	color: $light-gold;
+	box-shadow: 0 1px 4px rgba($light-red,.6);
 	&:hover, &:active , &:focus {
-		background: $red;
-		border: 1px solid $red;
+		@include background-image(linear-gradient(to bottom,$dark-red, $red));
+		border: 0;
+		color: $light-gold;
+		box-shadow: 0 1px 4px rgba($light-red,.6);
 	}
 	&:active {
 		&:hover, &:focus  {
-			background: $gold;
-			border: 1px solid $gold;
+			@include background-image(linear-gradient(to bottom,$dark-red, $red));
+			border: 0;
+			color: $light-gold;
+			box-shadow: 0 1px 4px rgba($light-red,.6);
 		}
 	}
 	&.disabled {
-		color: beige;
-		background: $light-gold;
-		border: 1px solid $light-gold;
+		@include background-image(linear-gradient(to bottom,$dark-red, $red));
+		border: 0;
+		box-shadow: 0 2px 4px rgba($red,.7);
 		&:hover, &:focus, &.focus, &:active, &.active, &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled].focus, &[disabled]:active, &[disabled].active {
-			background: $light-gold;
-			border: 1px solid $light-gold;	
+			@include background-image(linear-gradient(to bottom,$dark-red, $red));
+			border: 0;
+//			box-shadow: 0 2px 4px rgba($red,.7);
 		}
 	}
 }
-.btn-lg, .btn-group-lg > .btn {
-	border-radius: 2px;
-	padding: 12px 36px;
-	letter-spacing: .1em;
-	font-size: 22px;
-	box-shadow: 0 10px 40px rgba($gray, .9)!important; 
-	i {
-		margin-left: 10px;
-	}
-	@include respond-to (only-device){
-		letter-spacing: 0;
-		font-size: 20px;
-	}
-}
-.btn-info {
-	@include transparent ($white, .7);
-	border: 1px solid $gold;
-	color: $gold;
-	&:hover, &:active , &:focus {
-		@include transparent ($white, .96);
-		border: 1px solid $gold;
-		color: $gold;
-	}
-	&:active {
-		&:hover, &:focus  {
-			@include transparent ($white, .96);
-			border: 1px solid $gold;
-		}
-	}
-}
-.btn-md {
-	border-radius: 0;
-	padding: 12px 25px;
-	font-size: 18px;
-	margin: 0 5px;
-}
+//.btn-lg, .btn-group-lg > .btn {
+//	border-radius: 2px;
+//	padding: 12px 36px;
+//	letter-spacing: .1em;
+//	font-size: 22px;
+//	box-shadow: 0 10px 40px rgba($gray, .9)!important; 
+//	i {
+//		margin-left: 10px;
+//	}
+//	@include respond-to (only-device){
+//		letter-spacing: 0;
+//		font-size: 20px;
+//	}
+//}
+//.btn-info {
+//	@include transparent ($white, .7);
+//	border: 1px solid $gold;
+//	color: $gold;
+//	&:hover, &:active , &:focus {
+//		@include transparent ($white, .96);
+//		border: 1px solid $gold;
+//		color: $gold;
+//	}
+//	&:active {
+//		&:hover, &:focus  {
+//			@include transparent ($white, .96);
+//			border: 1px solid $gold;
+//		}
+//	}
+//}
+//.btn-md {
+//	border-radius: 0;
+//	padding: 12px 25px;
+//	font-size: 18px;
+//	margin: 0 5px;
+//}
 .btn-sm {
+	color: $light-gray;
 	border-radius: 4px;
 	padding: 8px 16px;
-	font-size: 16px;
-	margin: 0 5px;
-	@include respond-to (normal-mobile){
-		font-size: 14px;
+	font-size: $xs-font;
+//	margin: 0 5px;
+	@include respond-to (xxs-mobile){
+		font-size: $xxs-font;
 		padding: 4px 8px;
 	}
 }
@@ -254,3 +277,9 @@ nav.main {
 	overflow: hidden;
 }
 
+//style
+.gray-note {
+	color: $gray;
+	font-size: 10px;
+	line-height: $xl-font;
+}
