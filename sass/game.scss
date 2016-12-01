@@ -376,6 +376,12 @@ label[for="arrow"] {
 		width: 118px!important;
 		color: $light-gray;
 	}
+	.icon-group {
+		img {
+			width: 26px;
+			height: 26px;
+		}
+	}
 	.tag-group {
 		.tag {
 			color: #999;

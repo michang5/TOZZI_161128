@@ -389,6 +389,10 @@ label[for="arrow"] span {
   width: 118px !important;
   color: #d8d8d8;
 }
+.game-info-bottom .icon-group img {
+  width: 26px;
+  height: 26px;
+}
 .game-info-bottom .tag-group .tag {
   color: #999;
   border-radius: 2px;
