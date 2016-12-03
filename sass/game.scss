@@ -207,7 +207,7 @@
     height: auto;
     font-weight: 400;
     font-size: 1.3em;
-    letter-spacing: 1px;
+//    letter-spacing: 1px;
 	background: image-url('info_bg.png') center -20px no-repeat;
 }
 .toggle {
@@ -276,8 +276,9 @@ label[for="arrow"] {
 	padding-left: 6px;
 	padding-right: 6px;
 	.row {
-		margin: 0;
-		margin-top: -8px;
+		margin-left: 0;
+		margin-right: 0;
+//		margin-top: -8px;
 		display: -webkit-flex;
 		display: flex;
 	}
@@ -305,8 +306,11 @@ label[for="arrow"] {
 	}
 }
 .game-info-top {
-	height: 156px;
+	height: 166px;
 	color: $white;
+	.row {
+		margin-top: -10px;
+	}
 	.col-side {
 		.ROI {
 			position: relative;
@@ -347,12 +351,20 @@ label[for="arrow"] {
 			top: 38px;
 		}
 		&.right {
+			float: right;
 			.level {
 				right: 0;
 			}
+			.name {
+				text-align: right;
+			}
 		}
-		&.right {
-			float: right;
+		&.pro-pic {
+			.name {
+				font-size: 10px;
+				display: block;
+				line-height: 1.2;
+			}
 		}
 	}
 	@include respond-to (xxs-mobile){
@@ -370,10 +382,15 @@ label[for="arrow"] {
 }
 .game-info-bottom {
 	height: 350px;
-	margin-top: 10px;
+//	margin-top: 20px;
+	.row {
+//		margin-top: 20px;
+		clear: clear;
+		@include clearfix;
+	}
 	.col-side {
 		font-size: 10px;
-		width: 118px!important;
+		width: 118px;
 		color: $light-gray;
 	}
 	.icon-group {
@@ -392,6 +409,7 @@ label[for="arrow"] {
 		}
 	}
 	.other-info {
+		line-height: 1.2;
 		span {
 			display: block;
 		}
@@ -412,6 +430,12 @@ label[for="arrow"] {
 		min-height: 200px;
 		margin: 10px auto;
 		border: 1px solid $gray;
+	}
+	.col-xs-6 {
+		font-size: 10px;
+		color: $light-gray;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	@include respond-to (xxs-mobile){
 			

@@ -207,7 +207,6 @@
   height: auto;
   font-weight: 400;
   font-size: 1.3em;
-  letter-spacing: 1px;
   background: url('../images/info_bg.png?1480557974') center -20px no-repeat;
 }
 
@@ -293,8 +292,8 @@ label[for="arrow"] span {
   padding-right: 6px;
 }
 .info-container.container .row {
-  margin: 0;
-  margin-top: -8px;
+  margin-left: 0;
+  margin-right: 0;
   display: -webkit-flex;
   display: flex;
 }
@@ -322,8 +321,11 @@ label[for="arrow"] span {
 }
 
 .game-info-top {
-  height: 156px;
+  height: 166px;
   color: #fff;
+}
+.game-info-top .row {
+  margin-top: -10px;
 }
 .game-info-top .col-side .ROI {
   position: relative;
@@ -363,11 +365,19 @@ label[for="arrow"] span {
   position: absolute;
   top: 38px;
 }
+.game-info-top .pro-pic.right {
+  float: right;
+}
 .game-info-top .pro-pic.right .level {
   right: 0;
 }
-.game-info-top .pro-pic.right {
-  float: right;
+.game-info-top .pro-pic.right .name {
+  text-align: right;
+}
+.game-info-top .pro-pic.pro-pic .name {
+  font-size: 10px;
+  display: block;
+  line-height: 1.2;
 }
 @media only screen and (max-width: 320px) {
   .game-info-top .subscribe {
@@ -382,11 +392,21 @@ label[for="arrow"] span {
 
 .game-info-bottom {
   height: 350px;
-  margin-top: 10px;
+}
+.game-info-bottom .row {
+  clear: clear;
+  *zoom: 1;
+}
+.game-info-bottom .row:after, .game-info-bottom .row:before {
+  content: "";
+  display: table;
+}
+.game-info-bottom .row:after {
+  clear: both;
 }
 .game-info-bottom .col-side {
   font-size: 10px;
-  width: 118px !important;
+  width: 118px;
   color: #d8d8d8;
 }
 .game-info-bottom .icon-group img {
@@ -399,6 +419,9 @@ label[for="arrow"] span {
   background: rgba(216, 216, 216, 0.16);
   padding: 1px 2px;
   border: 1px solid #999;
+}
+.game-info-bottom .other-info {
+  line-height: 1.2;
 }
 .game-info-bottom .other-info span {
   display: block;
@@ -419,4 +442,10 @@ label[for="arrow"] span {
   min-height: 200px;
   margin: 10px auto;
   border: 1px solid #999;
+}
+.game-info-bottom .col-xs-6 {
+  font-size: 10px;
+  color: #d8d8d8;
+  padding-left: 0;
+  padding-right: 0;
 }
