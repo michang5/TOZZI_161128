@@ -7,18 +7,17 @@ $(function() {
 		$( ".game-info-bottom" ).slideToggle( 300 );
 	});
 	
-	$('.nav-open').on("click", function (e) {
-		e.preventDefault();
 
-		$(this).toggleClass('nav-close');
+	$('#PL').click(function () {
+		if ($(this).css("margin-right") == "200px") {
+			$(this).animate({
+				"margin-right": '-=200'
+			});
+		} else {
+			$(this).animate({
+				"margin-right": '+=200'
+			});
+		}
+
 	});
-	
-
-	$(".btn-close").click(function () {
-			$(".modal").hide();
-		idleTime = 0;
-	});
-	
-	
-});
-
+});     

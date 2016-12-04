@@ -13,14 +13,12 @@ body, html {
 	margin: 0;
 }
 body {
-	
-	font-family: 'Times', "source-han-sans-traditional", serif, 'arial', "微軟正黑體", "Microsoft JhengHei";
+	font-family: 'Lora', "source-han-sans-traditional", serif, 'times', "微軟正黑體", "Microsoft JhengHei";
 	word-wrap: break-word;
 	word-break: normal;
 	line-height: 1.85;
-	background: image-url('bg.jpg') top center no-repeat;
-	background-size: cover;
-//	color: $dark-gray;
+	background: image-url('bg.jpg') top center;
+//	background-size: cover;
 }
 
 //basic style
@@ -37,7 +35,6 @@ h2 {
 p {
 	font-size: $m-font;
 	font-weight: 200;
-	font-family: "source-han-sans-traditional", sans-serif;
 }
 p, h2, h3, h4 {
 }
@@ -84,21 +81,21 @@ ul, li {
     outline: none;
 }
 .btn-primary {
-	@include background-image(linear-gradient(to bottom,$red,$dark-red));
+	@include background-image(linear-gradient(to bottom,$light-red,$red));
 	border: 0;
-	color: $light-gold;
-	box-shadow: 0 1px 4px rgba($light-red,.6);
+	color: $milk;
+//	box-shadow: 0 1px 4px rgba($light-red,.6);
 	&:hover, &:active , &:focus {
-		@include background-image(linear-gradient(to bottom,$dark-red, $red));
+		@include background-image(linear-gradient(to bottom,$light-red,$red));
 		border: 0;
-		color: $light-gold;
+		color: $milk;
 		box-shadow: 0 1px 4px rgba($light-red,.6);
 	}
 	&:active {
 		&:hover, &:focus  {
-			@include background-image(linear-gradient(to bottom,$dark-red, $red));
+			@include background-image(linear-gradient(to bottom,$red,$light-red));
 			border: 0;
-			color: $light-gold;
+			color: $milk;
 			box-shadow: 0 1px 4px rgba($light-red,.6);
 		}
 	}
@@ -109,7 +106,6 @@ ul, li {
 		&:hover, &:focus, &.focus, &:active, &.active, &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled].focus, &[disabled]:active, &[disabled].active {
 			@include background-image(linear-gradient(to bottom,$dark-red, $red));
 			border: 0;
-//			box-shadow: 0 2px 4px rgba($red,.7);
 		}
 	}
 }
@@ -163,15 +159,13 @@ ul, li {
 //input
 header {
 	text-align: center;
+	padding-top: 10px;
 	h2.logo {
-		font-family: 'Sarpanch', sans-serif;
-		font-weight: 900;
-		color: $light-gray;
-		text-align: center;
 		display: inline-block;
-		margin: 10px auto;
 		line-height: 1;
-		text-shadow: 0 0 6px #000, 0 0 0 #000, 1px 4px 6px #000;
+		width: 58px;
+		height: 56px;
+		margin: 0 auto;
 	}
 }
 nav.icon-group {
@@ -181,30 +175,40 @@ nav.icon-group {
 	ul {
 		li {
 			margin: 0 1px;
+			height: 26px;
+			width: 26px;
 			@include inline-block;
-			&:nth-child(1) {
-				background: image-url('icon-messege.png');
-			}
-			&:nth-child(2) {
-				background: image-url('icon-member.png');
-			}
-			&:nth-child(3) {
-				background: image-url('icon-notification.png');
-			}
 			a {
 				display: block;
 				height: 26px;
 				width: 26px;
+				background: image-url('icon-header.png') no-repeat;
+				@include image-2x("icon-headerx2.png", 78px, 26px);
 			}
-		}
+		
+			&:nth-child(1) {
+				a {
+					background-position: 0 0;
+				}
+			}
+			&:nth-child(2) {
+				a {
+					background-position: -26px 0;
+				}
+			}
+			&:nth-child(3) {
+				a {
+					background-position: -52px 0;
+				}
+			}
+		}	
 	}
 }
 //element
 nav.main {
-	@include background-image(radial-gradient(50% -50%, circle, #004166, $dark 80%));
-	border-top: 1px solid #09334E;
-	font-family: 'Sarpanch', sans-serif;
-	font-size: .9em;
+	@include background-image(radial-gradient(50% -50%, circle, $light-red, $red 80%));
+	font-family: 'Lora', sans-serif;
+	font-size: .8em;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
@@ -213,13 +217,15 @@ nav.main {
 	ul {
 		text-align: center;
 		li {
-			@include inline-block;
+			display: inline-block;
 			width: 19%;
 			height: 56px;
+			vertical-align: top;
 			a {
 				display: block;
-				line-height: 1;
-				text-shadow: 0 0 3px $dark, 0 0 6px $dark;
+				line-height: 1.2;
+				color: $milk;
+//				text-shadow: 0 0 3px $dark, 0 0 6px $dark;
 				&:before {
 					content: ('');
 					display: block;
@@ -228,41 +234,41 @@ nav.main {
 					height: 35px;
 					margin-top: 2px;
 					background: image-url('nav-sprite.png') no-repeat;
-					@include image-2x("nav-spritex2.png", 44px, 175px);
+					@include image-2x("nav-spritex2.png", 220px, 35px);
 				}
 			}
 			&:nth-child(1) {
 				a {
 					&:before {						
-						background-position: top;
+						background-position: 0 0;
 					}
 				}
 			}
 			&:nth-child(2) {
 				a {
 					&:before {
-						background-position: 0 -35px ;
+						background-position: -44px 0;
 					}
 				}
 			}
 			&:nth-child(3) {
 				a {
 					&:before {
-						background-position: 0 -70px ;
+						background-position: -88px 0;
 					}
 				}
 			}
 			&:nth-child(4) {
 				a {
 					&:before {
-						background-position: 0 -105px ;
+						background-position: -132px 0;
 					}
 				}
 			}
 			&:nth-child(5) {
 				a {
 					&:before {
-						background-position: 0 -140px ;
+						background-position: -176px 0;
 					}
 				}
 			}
@@ -270,16 +276,10 @@ nav.main {
 	}
 }
 
-
-.wrapper {
-	padding: 0 10px;
-	min-height: 100%;
-	overflow: hidden;
-}
-
 //style
 .gray-note {
-	color: $gray;
+	color: $dark-gray;
 	font-size: 10px;
 	line-height: $xl-font;
 }
+

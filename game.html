@@ -23,8 +23,7 @@
 	<link href="css/game.css" rel="stylesheet">
 	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Sarpanch:500,700,900" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="js/html5shiv.min.js"></script>
 		<script type="text/javascript" src="js/respond.min.js"></script>
@@ -45,106 +44,141 @@
 	</nav>
 	<div class="wrapper">
 		<header>
-			<h2 class="logo">TOZZI</h2>
+			<h2 class="logo"><img src="images/TOZZI.png" class="img-responsive" alt="TOZZI" title="TOZZI"></h2>
 		</header>
-		<div class="timer-container">
-			<span class="serial">TZ168</span>
-			<span class="countdown">30</span>
-			<span class="day">天</span>
+		<div class="content container">
+			<div class="timer-container">
+				<span class="serial">TZ168</span>
+				<span class="countdown">30</span>
+				<span class="day">days</span>
+			</div>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#feed">Feed</a></li>
+				<li><a data-toggle="tab" href="#comment">Comment</a></li>
+			</ul>
+			<button type="button" class="btn btn-primary btn-xs">我要留言</button>
+			<div class="main-content">
+				<div class="tab-content container">
+					<div id="feed" class="tab-pane fade in active">
+						<div id="feed-group">
+							<div class="feed left">
+								<div class="trader-info">
+									<span class="photo"><img src="images/trader-1.png" alt="trader name" title="trader name"></span>
+									<span class="states">WIN</span>
+								</div>
+								<span class="feed-content"> 
+									<span class="buy-sell">賣出</span>
+									<span class="detail">#6192巨路40張，成交價48.7元，手續費後獲利 NT$ 13,562 (+0.71%)</span>
+								</span>
+							</div>
+							<div class="feed right">
+								<div class="trader-info">
+									<span class="photo"><img src="images/trader-2.png" alt="trader name" title="trader name"></span>
+									<span class="states">LOSE</span>
+								</div>
+								<span class="feed-content"> 
+									<span class="buy-sell">賣出</span>
+									<span class="detail">#6192巨路40張，成交價48.7元，手續費後獲利 NT$ 13,562 (+0.71%)</span>
+								</span>
+							</div>
+							<div class="feed left">
+								<div class="trader-info">
+									<span class="photo"><img src="images/trader-1.png" alt="trader name" title="trader name"></span>
+									<span class="states">嗆聲</span>
+								</div>
+								<span class="feed-content"> 
+									<span class="detail">算了吧，我對大量小單的黑天鵝操作經驗一直都不好</span>
+									<span class="time">5分前</span>
+								</span>
+							</div>
+							<div class="feed news">
+								<p><span>報導：</span>賽事來到中後段，@Nikin仍然緊咬不放。雙方看來都陸續偏離的原有的交易風格，本週市況因此讓戰局扭轉。讓我們繼續觀察誰能勝出！</p>
+							</div>
+							<div class="feed left">
+								<div class="trader-info">
+									<span class="photo"><img src="images/trader-1.png" alt="trader name" title="trader name"></span>
+									<span class="states">嗆聲</span>
+								</div>
+								<span class="feed-content"> 
+									<span class="detail">算了吧，我對大量小單的黑天鵝操作經驗一直都不好</span>
+									<span class="time">5分前</span>
+								</span>
+							</div>
+							<div class="feed news">
+								<p><span>報導：</span>賽事來到中後段，@Nikin仍然緊咬不放。雙方看來都陸續偏離的原有的交易風格，本週市況因此讓戰局扭轉。讓我們繼續觀察誰能勝出！</p>
+							</div>
+							<div class="feed news">
+								<p><span>報導：</span>賽事來到中後段，@Nikin仍然緊咬不放。雙方看來都陸續偏離的原有的交易風格，本週市況因此讓戰局扭轉。讓我們繼續觀察誰能勝出！</p>
+							</div>
+							<div class="feed news">
+								<p><span>報導：</span>賽事來到中後段，@Nikin仍然緊咬不放。雙方看來都陸續偏離的原有的交易風格，本週市況因此讓戰局扭轉。讓我們繼續觀察誰能勝出！</p>
+							</div>
+							<div class="feed news">
+								<p><span>報導：</span>賽事來到中後段，@Nikin仍然緊咬不放。雙方看來都陸續偏離的原有的交易風格，本週市況因此讓戰局扭轉。讓我們繼續觀察誰能勝出！</p>
+							</div>
+						</div>
+					</div>
+					<div id="comment" class="tab-pane fade">
+						<div id="comment-group">
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+							<div class="comment">
+								<span class="comment-id">Nikin：</span>
+								<span class="comment-content">我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
 		</div>
-		<ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#feed">Feed</a></li>
-			<li><a data-toggle="tab" href="#comment">Comment</a></li>
-		</ul>
 		
-		<div class="tab-content container">
-			<div id="feed" class="tab-pane fade in active">
-				<div id="feed-group">
-					<div class="feed left">
-						<div class="trader-info">
-							<span class="photo"><img src="images/trader-1.png" alt="trader name" title="trader name"></span>
-							<span class="states">WIN</span>
-						</div>
-						<span class="feed-content"> 
-							<span class="buy-sell">賣出</span>
-							<span class="detail">#6192巨路40張，成交價48.7元，手續費後獲利 NT$ 13,562 (+0.71%)</span>
-						</span>
-					</div>
-					<div class="feed right">
-						<div class="trader-info">
-							<span class="photo"><img src="images/trader-2.png" alt="trader name" title="trader name"></span>
-							<span class="states">LOSE</span>
-						</div>
-						<span class="feed-content"> 
-							<span class="buy-sell">賣出</span>
-							<span class="detail">#6192巨路40張，成交價48.7元，手續費後獲利 NT$ 13,562 (+0.71%)</span>
-						</span>
-					</div>
-					<div class="feed left">
-						<div class="trader-info">
-							<span class="photo"><img src="images/trader-1.png" alt="trader name" title="trader name"></span>
-							<span class="states">嗆聲</span>
-						</div>
-						<span class="feed-content"> 
-							<span class="detail">算了吧，我對大量小單的黑天鵝操作經驗一直都不好</span>
-							<span class="time">5分前</span>
-						</span>
-					</div>
-					<div class="feed news">
-						<p><span>報導：</span>賽事來到中後段，@Nikin仍然緊咬不放。雙方看來都陸續偏離的原有的交易風格，本週市況因此讓戰局扭轉。讓我們繼續觀察誰能勝出！</p>
-					</div>
-					<div class="feed left">
-						<div class="trader-info">
-							<span class="photo"><img src="images/trader-1.png" alt="trader name" title="trader name"></span>
-							<span class="states">嗆聲</span>
-						</div>
-						<span class="feed-content"> 
-							<span class="detail">算了吧，我對大量小單的黑天鵝操作經驗一直都不好</span>
-							<span class="time">5分前</span>
-						</span>
-					</div>
-				</div>
+		<div id="PL">
+			<div class="title">
+				My P/L
 			</div>
-			<div id="comment" class="tab-pane fade">
-				<button type="button" class="btn btn-primary btn-xs pull-right">我要留言</button>
-				<div id="comment-group">
-					<div class="comment">
-						<span class="comment-id">Nikin：</span>
-						<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
-					</div>
-					<div class="comment">
-						<span class="comment-id">Nikin：</span>
-						<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
-					</div>
-					<div class="comment">
-						<span class="comment-id">Nikin：</span>
-						<span class="comment-content">我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！</span>
-					</div>
-					<div class="comment">
-						<span class="comment-id">Nikin：</span>
-						<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
-					</div>
-					<div class="comment">
-						<span class="comment-id">Nikin：</span>
-						<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
-					</div>
-					<div class="comment">
-						<span class="comment-id">Nikin：</span>
-						<span class="comment-content">我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！</span>
-					</div>
-					<div class="comment">
-						<span class="comment-id">Nikin：</span>
-						<span class="comment-content">我要看 Roick 跟 Kaede 比賽！</span>
-					</div>
-					<div class="comment">
-						<span class="comment-id">Nikin：</span>
-						<span class="comment-content">我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！我要看 Roick 跟 Kaede 比賽！</span>
-					</div>
-				</div>
+			<div class="detail">
+				<span>Match: ＋NT 38,117(+11.7%)</span>
+				<span>Portfolio: ＋NT 38,117(+11.7%)</span>
 			</div>
 		</div>
+		
 		<div class="info-container container">
-			<!--info top-->
+			<!--game-info-top-->
 			<div class="game-info-top">
 				<div class="toggle">
 					<input type="checkbox" id="arrow" />
@@ -169,8 +203,8 @@
 					</div>
 					<div class="col-center center-info">
 						<button type="button" class="btn btn-primary btn-xs subscribe"><span>Subscrib</span>&#124<span>1234</span></button>
-						<span class="gray-note">Fundraising Deadline<br>10 Days</span>
-						<span class="">VS</span>
+						<span class="gray-note">Fundraising<br>10 Days</span>
+						<span class="VS">VS</span>
 					</div>
 					<div class="col-side">
 						<div class="pro-pic right">
@@ -190,7 +224,7 @@
 					</div>
 				</div>
 			</div>
-			<!--info bottom-->
+			<!--game-info-bottom-->
 			<div class="game-info-bottom">
 				<div class="row row1">
 					<div class="col-side">
@@ -204,7 +238,7 @@
 						<div class="game-info">
 							<span>TZ111</span>
 							<span>Construction</span>
-<!--							<span>總資本：500,000</span>-->
+
 						</div>
 					</div>
 					<div class="col-side text-right">
@@ -223,8 +257,7 @@
 							<span class="tag">Finance</span>
 						</div>
 						<div class="other-info">
-							<span>15-7-1</span>
-							<span>MDD 0%</span>
+							<span>15-7-1 / MDD 23.5%</span>
 							<span>Principal $200,000</span>
 							<span>Fund Raised $100,000</span>
 						</div>
@@ -236,8 +269,7 @@
 							<span class="tag">Finance</span>
 						</div>
 						<div class="other-info">
-							<span>15-7-1</span>
-							<span>MDD 0%</span>
+							<span>15-7-1 / MDD 0%</span>
 							<span>Principal $200,000</span>
 							<span>Fund Raised $100,000</span>
 						</div>
@@ -248,9 +280,9 @@
 				</div>
 			</div>
 		</div>
-    
 	</div>
-  
+	<div class="footer"></div>
+	
 	<!--Navigation-->
 	<nav class="main">
 		<ul>

@@ -6,7 +6,7 @@
   background: url('../images/timer-bg.png?1480331531') no-repeat top center;
   background-size: cover;
   padding-top: 14px;
-  color: #d7b66c;
+  color: #886940;
 }
 .timer-container span {
   display: block;
@@ -19,7 +19,7 @@
 .timer-container span.countdown {
   font-size: 1.75em;
   font-family: Impact, Charcoal, sans-serif;
-  text-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
+  text-shadow: 0 0 4px rgba(76, 74, 72, 0.6), 0 0 10px rgba(76, 74, 72, 0.6);
 }
 
 .nav-tabs {
@@ -34,11 +34,11 @@
   font-family: 'Sarpanch', sans-serif;
   font-weight: 700;
   font-size: 1.125em;
-  color: #d8d8d8;
+  color: #EFEFEF;
   line-height: 1;
-  text-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
+  text-shadow: 0 0 4px rgba(76, 74, 72, 0.6), 0 0 10px rgba(76, 74, 72, 0.6);
   border: 0;
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid #EFEFEF;
   background-color: transparent;
   position: relative;
 }
@@ -46,7 +46,7 @@
   content: "";
   width: 8px;
   height: 8px;
-  background: #d8d8d8;
+  background: #EFEFEF;
   display: block;
   position: absolute;
   left: 48%;
@@ -58,9 +58,9 @@
 }
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
   background-color: transparent;
-  color: #d7b66c;
+  color: #886940;
   border: 0;
-  border-bottom: 1px solid #d7b66c;
+  border-bottom: 1px solid #886940;
 }
 .nav-tabs > li:nth-of-type(1) {
   float: left;
@@ -74,19 +74,19 @@
   }
 }
 .nav-tabs > li.active > a {
-  color: #d7b66c;
+  color: #886940;
   border: 0;
-  border-bottom: 1px solid #d7b66c;
+  border-bottom: 1px solid #886940;
   background-color: transparent;
 }
 .nav-tabs > li.active > a:after {
-  background: #d7b66c;
+  background: #886940;
 }
 .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   background-color: transparent;
-  color: #d7b66c;
+  color: #886940;
   border: 0;
-  border-bottom: 1px solid #d7b66c;
+  border-bottom: 1px solid #886940;
 }
 
 .tab-content {
@@ -109,14 +109,14 @@
 .tab-content .comment, .tab-content .feed {
   margin-bottom: 16px;
   padding: 8px;
-  color: #d8d8d8;
+  color: #EFEFEF;
   font-size: 1em;
   line-height: 1.25em;
   position: relative;
   background: rgba(96, 69, 9, 0.8);
   border-radius: 2px;
-  text-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
-  box-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6), 0 10px 30px rgba(0, 1, 2, 0.6);
+  text-shadow: 0 0 4px rgba(76, 74, 72, 0.6), 0 0 10px rgba(76, 74, 72, 0.6);
+  box-shadow: 0 0 4px rgba(76, 74, 72, 0.6), 0 0 10px rgba(76, 74, 72, 0.6), 0 10px 30px rgba(76, 74, 72, 0.6);
 }
 .tab-content .comment:after, .tab-content .feed:after {
   top: 100%;
@@ -156,7 +156,7 @@
   height: 32px;
   border-radius: 100%;
   overflow: hidden;
-  box-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
+  box-shadow: 0 0 4px rgba(76, 74, 72, 0.6);
 }
 .tab-content .feed .trader-info > span.photo img {
   width: 100%;
@@ -207,7 +207,7 @@
   height: auto;
   font-weight: 400;
   font-size: 1.3em;
-  background: url('../images/info_bg.png?1480557974') center -20px no-repeat;
+  background: url('../images/info_bg.png?1480864018') center -20px no-repeat;
 }
 
 .toggle {
@@ -218,7 +218,7 @@
   position: relative;
   top: 0;
   z-index: 2;
-  background: url('../images/toggle.png?1480336249') center top no-repeat;
+  background: url('../images/toggle.png?1480864018') center top no-repeat;
 }
 
 #arrow {
@@ -247,7 +247,7 @@
 label[for="arrow"] {
   width: 100px;
   height: 0;
-  background: #FFF0CC;
+  background: #C2A988;
   transition: .75s;
   -webkit-transition: 1s;
   cursor: pointer;
@@ -258,7 +258,7 @@ label[for="arrow"]:before, label[for="arrow"]:after {
   width: 10px;
   height: 2px;
   top: 10px;
-  box-shadow: 0 0 4px #000102;
+  box-shadow: 0 0 4px #4C4A48;
   background: inherit;
   transition: inherit;
   -webkit-transition: inherit;
@@ -278,13 +278,13 @@ label[for="arrow"]:after {
   transform: rotate(45deg);
 }
 label[for="arrow"] span {
-  color: #FFF0CC;
+  color: #C2A988;
   width: 100px;
   margin: 0 auto;
   font-size: 12px;
   display: block;
   padding-top: 12px;
-  text-shadow: 0 0 6px #000102;
+  text-shadow: 0 0 6px #4C4A48;
 }
 
 .info-container.container {
@@ -407,7 +407,7 @@ label[for="arrow"] span {
 .game-info-bottom .col-side {
   font-size: 10px;
   width: 118px;
-  color: #d8d8d8;
+  color: #EFEFEF;
 }
 .game-info-bottom .icon-group img {
   width: 26px;
@@ -416,7 +416,7 @@ label[for="arrow"] span {
 .game-info-bottom .tag-group .tag {
   color: #999;
   border-radius: 2px;
-  background: rgba(216, 216, 216, 0.16);
+  background: rgba(239, 239, 239, 0.16);
   padding: 1px 2px;
   border: 1px solid #999;
 }
@@ -431,7 +431,7 @@ label[for="arrow"] span {
   font-size: 12px;
   text-align: center;
   color: #fff;
-  box-shadow: 0 0 4px rgba(0, 1, 2, 0.6), 0 0 10px rgba(0, 1, 2, 0.6);
+  box-shadow: 0 0 4px rgba(76, 74, 72, 0.6);
 }
 .game-info-bottom .game-info span {
   display: block;
@@ -445,7 +445,7 @@ label[for="arrow"] span {
 }
 .game-info-bottom .col-xs-6 {
   font-size: 10px;
-  color: #d8d8d8;
+  color: #EFEFEF;
   padding-left: 0;
   padding-right: 0;
 }
